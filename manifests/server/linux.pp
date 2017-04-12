@@ -52,6 +52,7 @@ class newrelic::server::linux (
   $newrelic_nrsysmond_labels         = undef,
   $newrelic_nrsysmond_timeout        = undef,
   $newrelic_nrsysmond_hostname       = undef,
+  $newrelic_nrsysmond_options        = {},
 ) inherits ::newrelic {
 
   if ! $newrelic_license_key {

@@ -181,3 +181,11 @@ timeout=<%= @newrelic_nrsysmond_timeout %>
 <%- if @newrelic_nrsysmond_hostname -%>
 hostname=<%= @newrelic_nrsysmond_hostname %>
 <%- end -%>
+
+
+#
+# Write out any other New Relic configuration options.
+#
+<%- newrelic_nrsysmond_options.each_pair do |key, value| -%>
+<%= key %>=<%= value %>
+<%- end -%>
